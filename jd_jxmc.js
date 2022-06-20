@@ -375,7 +375,7 @@ async function pasture() {
         continue;
       }
       if (Number(materialinfoList[j].value) > 10) {
-        $.canFeedTimes = Math.floor(Number(materialinfoList[j].value) / 10);
+        $.canFeedTimes = 12 // Math.floor(Number(materialinfoList[j].value) / 10); // 充值为常量
         console.log(`\n共有白菜${materialinfoList[j].value}颗，每次喂10颗，可以喂${$.canFeedTimes}次`);
         $.runFeed = true;
         for (let k = 0; k < $.canFeedTimes && $.runFeed && k < 40; k++) {
